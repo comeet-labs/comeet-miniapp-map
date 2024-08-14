@@ -9,6 +9,7 @@ import { places } from "./data/base";
 import WebApp from "@twa-dev/sdk";
 
 // WebApp.showAlert('Ready')
+console.log(WebApp.isVersionAtLeast("6.2"));
 
 export default function Index() {
   const apiUrl = `https://api-maps.yandex.ru/3.0/?apikey=${process.env.NEXT_PUBLIC_YANDEX_MAP_KEY}&lang=ru_RU`;
