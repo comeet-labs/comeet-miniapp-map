@@ -6,6 +6,9 @@ import Bounds from "./components/bounds";
 import List from "./components/list";
 import { Map } from "./components/map";
 import { places } from "./data/base";
+import WebApp from "@twa-dev/sdk";
+
+WebApp.showAlert('Ready')
 
 export default function Index() {
   const apiUrl = `https://api-maps.yandex.ru/3.0/?apikey=${process.env.NEXT_PUBLIC_YANDEX_MAP_KEY}&lang=ru_RU`;
