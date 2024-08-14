@@ -7,12 +7,19 @@ import List from "./components/list";
 import { Map } from "./components/map";
 import { places } from "./data/base";
 import WebApp from "@twa-dev/sdk";
+import { useEffect } from "react";
 
 // WebApp.showAlert('Ready')
-console.log(WebApp.isVersionAtLeast("6.2"));
 
 export default function Index() {
   const apiUrl = `https://api-maps.yandex.ru/3.0/?apikey=${process.env.NEXT_PUBLIC_YANDEX_MAP_KEY}&lang=ru_RU`;
+  
+  const WebAppVersionInfo = () => {
+    useEffect(() => {
+      console.log(WebApp.isVersionAtLeast("6.2"));
+    }, []);
+    return <div>WebAppVersionInfo</div>;
+  };
 
   return (
     <PageStateProvider>
